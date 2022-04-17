@@ -1,7 +1,6 @@
 # Picker de personaje de Valorant 
 
 import random
-from subprocess import list2cmdline
 
 contador = 0 
 seguir = True
@@ -9,34 +8,13 @@ seguir2 = True
 terminate = False
 listnumber = 0 
 
-personajes = ["ASTRA",
- "BREACH", 
- "BRIMSTONE", 
- "CHAMBER", 
- "CYPHER", 
- "JETT", 
- "KAYO", 
- "KILLJOY", 
- "NEON", 
- "OMEN", 
- "PHOENIX", 
- "RAZE", 
- "REYNA",
- "SAGE", 
- "SKYE", 
- "SOVA", 
- "VIPER", 
- "YORU"]
-
-newlist = []
-
+mainlist = []
 
 def escoger():
     global contador
     while contador < numpersonajes:
         contador = contador + 1
-        print(random.choice(personajes))
-
+        print(random.choice(mainlist))
 
 
 while terminate == False:
@@ -47,32 +25,32 @@ while terminate == False:
     print("3: Exit")
     menuopt = int(input("Option: "))
     if menuopt == 1: 
-        numpersonajes = int(input("\nEscriba la cantidad de personajes que desea escoger: "))
-        decision = input("Desea omitir a algun personaje Y / N: ").upper()
+        numpersonajes = int(input("\nWrite the number of items you wish to randomly select: "))
+        decision = input("Do you wish to skip any of the items in the list? Y / N: ").upper()
         if decision == "Y":
             while seguir == True:
-                print(*personajes)
-                borrar = input("\nEscriba el nombre del personje que desea omitir: ").upper()
-                personajes.remove(borrar)
-                print(*personajes)
-                decision2 = input("Desea borrar otro personaje de la lista Y / N: ").upper()
+                print(*mainlist)
+                borrar = input("\nWrite the item you wish to remove: ").upper()
+                mainlist.remove(borrar)
+                print(*mainlist)
+                decision2 = input("Do you wish to remove another item? Y / N: ").upper()
                 if decision2 == "Y":
                     continue
                 elif decision2 == "N":
                     seguir = False
                 else:
-                    print("Decision invalida, intente de nuevo!")
+                    print("Invalid answer, try again!")
         elif decision == "N":
             pass
         else: 
-            print("Decision invalida, intente de nuevo!")
+            print("Invalid answer, try again!")
         print("\n")
         escoger()
         print("\n")
     elif menuopt == 2: 
         while seguir2 == True: 
-            newlist.append(input("Item to add to new list: ").upper())
-            print(*newlist)
+            mainlist.append(input("Item to add to new list: ").upper())
+            print(*mainlist)
             decision3 = input("Do you wish to add another item to the list? Y / N: ").upper()
             if decision3 == "Y":
                 continue
