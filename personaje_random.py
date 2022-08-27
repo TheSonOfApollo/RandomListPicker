@@ -11,6 +11,7 @@ personajes = ["ASTRA",
  "BRIMSTONE", 
  "CHAMBER", 
  "CYPHER", 
+ "FADE",
  "JETT", 
  "KAYO", 
  "KILLJOY", 
@@ -55,3 +56,4 @@ else:
 print("\n")
 escoger()
 print("\n")
+
