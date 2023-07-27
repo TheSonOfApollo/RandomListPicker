@@ -1,0 +1,28 @@
+public static void main(String[] args) {
+
+here(); 
+
+public static void here() {
+    int a = 0; 
+    while (int i = 21; i >= 3; i =- 3){
+        System.out.println(a + i); 
+    }System.out.println("Your total rowing distance was" + a + "!")
+
+    int a = this.a; 
+
+    if (this.a > 1000){
+        const Z = this.a; 
+       int b = Z / 1000; 
+       int c = Z - 1000;
+       b =- c; 
+       System.out.println("Your total rowing distance in kilometers was: " + 
+       b + "Kilometers and " + c + "meters!"); 
+       System.out.println(b + "." + c "K"); 
+       System.out.println("0.0")
+    } else {
+        System.out.println("You didn't make it to 1K"); 
+        System.out.println("T-T"); 
+    }
+
+}
+}
